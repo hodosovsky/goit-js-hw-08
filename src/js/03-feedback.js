@@ -32,11 +32,13 @@ function onFormInput(event) {
 
 function populateForm(event) {
   const storage = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  if (storage.email) {
-    input.value = storage.email;
-  }
-  if (storage.message) {
-    textArea.value = storage.message;
+  if (storage) {
+    if (storage.email) {
+      input.value = storage.email;
+    }
+    if (storage.message) {
+      textArea.value = storage.message;
+    }
   }
   // console.log(storage);
   // input.value = storage.email;
